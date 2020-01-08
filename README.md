@@ -1,2 +1,4 @@
 # break-out-js
-A pure JS breakout game
+A simple JS breakout game
+
+This game is based on the steps from http://breakout.enclavegames.com/.
