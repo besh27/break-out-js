@@ -1,0 +1,19 @@
+{
+  "name": "break-out-js",
+  "version": "1.0.0",
+  "description": "A simple JS Break Out Game",
+  "main": "/src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/besh27/break-out-js.git"
+  },
+  "author": "Benjamin Esh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/besh27/break-out-js/issues"
+  },
+  "homepage": "https://github.com/besh27/break-out-js#readme"
+}
