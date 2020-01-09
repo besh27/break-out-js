@@ -77,7 +77,7 @@ const drawBall = (curLevel) => {
 }
 var paddleX = (canvas.width - currentLevel.paddleWidth) / 2;
 
-const drawPaddle = (curLevel) =>  {
+const drawPaddle = (curLevel) => {
     let { paddleHeight, paddleWidth } = curLevel;
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
@@ -86,7 +86,7 @@ const drawPaddle = (curLevel) =>  {
     ctx.closePath();
 }
 
-const draw = () =>  {
+const draw = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall(currentLevel);
     drawPaddle(currentLevel);
@@ -100,20 +100,20 @@ const draw = () =>  {
         dy = -dy;
     }
 
-    if(rightPressed) {
+    if (rightPressed) {
         paddleX += 7;
-        if (paddleX + paddleWidth > canvas.width){
+        if (paddleX + paddleWidth > canvas.width) {
             paddleX = canvas.width - paddleWidth;
         }
     }
-    else if(leftPressed) {
+    else if (leftPressed) {
         paddleX -= 7;
-        if (paddleX < 0){
+        if (paddleX < 0) {
             paddleX = 0;
         }
     }
 
     x += dx;
     y += dy;
-} 
+}
 setInterval(() => draw(currentLevel), currentLevel.ballSpeed);
