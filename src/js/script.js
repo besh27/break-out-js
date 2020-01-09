@@ -50,6 +50,14 @@ function drawBall(curLevel) {
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall(currentLevel);
+    const { ballSize } = currentLevel;
+
+    if(x + dx > canvas.width-ballSize || x + dx < ballSize) {
+        dx = -dx;
+    }
+    if(y + dy > canvas.height-ballSize || y + dy < ballSize) {
+        dy = -dy;
+    }
     x += dx;
     y += dy;
 }setInterval(() => draw(currentLevel), currentLevel.ballSpeed);
