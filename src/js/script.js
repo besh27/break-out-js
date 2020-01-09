@@ -2,8 +2,8 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = canvas.width / 2;
 var y = canvas.height - 30;
-var dx =  2;
-var dy =  -2;
+var dx = 2;
+var dy = -2;
 
 const level = (skillLevel) => {
     let ballSpeed = 20;
@@ -41,7 +41,7 @@ function drawBall(curLevel) {
     let { ballSize } = curLevel;
 
     ctx.beginPath();
-    ctx.arc(x, y, ballSize, 0, Math.PI*2);
+    ctx.arc(x, y, ballSize, 0, Math.PI * 2);
     ctx.fillStyle = "#0095DD";
     ctx.fill();
     ctx.closePath();
@@ -52,12 +52,12 @@ function draw() {
     drawBall(currentLevel);
     const { ballSize } = currentLevel;
 
-    if(x + dx > canvas.width-ballSize || x + dx < ballSize) {
+    if (x + dx > canvas.width - ballSize || x + dx < ballSize) {
         dx = -dx;
     }
-    if(y + dy > canvas.height-ballSize || y + dy < ballSize) {
+    if (y + dy > canvas.height - ballSize || y + dy < ballSize) {
         dy = -dy;
     }
     x += dx;
     y += dy;
-}setInterval(() => draw(currentLevel), currentLevel.ballSpeed);
+} setInterval(() => draw(currentLevel), currentLevel.ballSpeed);
